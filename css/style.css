@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+/* Asi se accede a las fuentes de Google */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+
+@import url('fontawesome-free-6.1.1-web/css/all.min.css');
+
+@import url('font_dream_orphans/stylesheet.css');
+
+:root{
+
+    --colorArcoiris1: #ffbe0b;
+    --colorArcoiris2: #fb5607;
+    --colorArcoiris3: #ff006e;
+    --colorArcoiris4: #8338ec;
+    --colorArcoiris5: #3a86ff;
+
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --gris-claro:#CCCCCC;
+    --gris-oscuro:#333333;
+
+}
+
+#top-nav{
+    background-color: var(--colorArcoiris4);
+    color: var(--color-blanco);
+}
+
+#main-header{/* Así se define una regla para un objeto por su id (empieza con #) */
+    background-color: var(--colorArcoiris5); /* color de fondo */
+    color: var(--gris-oscuro); /* color de texto */
+    position: sticky;/* Que al hacer Scroll se quede pegado el objeto en la posición definida por top */
+    top: 0;
+    z-index: 1000; /* Controlar el orden de profundidad de los objetos, el que tiene z-index mas alto tapa al resto */
+    padding-top: 10px;
+}
+
+#main-header p{/* El espacio indica dentro de */
+    margin-bottom: 0;
+}
+
+#header-content{
+    display: flex;
+    justify-content: space-between;/* Separa los elementos que contiene los mas posible */
+}
+
+#main-banner{
+    position: relative;
+}
+#main-banner figcaption{
+    position: absolute;
+    background-color: var(--color-blanco);
+    bottom: -60px;
+    left: 30%;
+    width: 40%;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+#anuncio{
+    background-image: url("../images/imagen-banner.png");
+    background-size: cover;
+    background-attachment: fixed;
+    /* Para que la imagen quede fija respecto al navegador*/
+}
+
+#ayuda{
+    background-image: url("../images/help.png");
+}
+
+
+#criterios{
+    background-color: #70E8FA;
+}
+
+#recursos{
+    background-color: #DCAAFA;
+}
+
+.container-banner {
+    /*width: 200px;*/
+    height: 400px;
+    overflow: hidden;
+    margin: 0px;
+    position: relative;
+}
+.container-banner > .crop {
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.titulo{
+    color: #000000;
+    text-decoration: none;
+}
+
+.mega-texto{
+    font-family: dream_orphansregular;
+    font-size: 46px;
+    /* font-weight: 200; */
+    line-height: 0.9em;
+    letter-spacing: -1px;
+}
+
+.texto-importante{
+    color: var(--colorArcoiris4);
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-shadow: 3px 3px var(--colorArcoiris5);
+}
+
+html{
+    scroll-behavior: smooth; /* para que la hacer scroll con los hipervínculos, sea con animación */
+}
+
+body{/* Así se define una regla de estilos para una etiqueta */
+    font-family: 'Poppins', Arial, sans-serif;/* Así se especifica la fuente a usar y las fuentes alternativas */
+    margin:0; /* Elimina el margen por defecto de body */
+    font-size: 16px;
+    line-height: 1.5em;/* em es una medida porcentual  relativa al tamaño de la fuente*/
+    color: var(--gris-oscuro)
+}
+
+a{
+    color: var(--color4);
+    text-decoration: none; /* Para que el hipervínculo no se muestre subrayado */
+}
+
+a:hover{
+    color: var(--color1);
+    text-decoration: underline;
+}
+
+
+p{
+    margin-top: 0;
+    margin-bottom: 0.9em;
+}
+
+img{
+    display: block; /* Esto elimina el espacio inferior que
+    tienen las imágenes por defecto */
+}
+figure{
+    margin:0;/* Elimina el margen por defecto que tienen los figure */
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0; /* Así se elimina el margen por defecto de los encabezados  */
+    line-height: 1.1em;/* alto de línea */
+    font-weight: normal;
+}
+h1{
+    font-weight: 900; /* Asi se indica el estilo de la fuente */
+    font-size: 36px; /* Tamaño de la fuente en pixeles */
+    letter-spacing: 0px; /* Espacio entre letra y letra */
+}
+h2{
+    font-family: cursive;
+    font-size: 24px;
+    letter-spacing: -1px;
+    /*text-transform: lowercase;*/ /* para que se muestre el texto en minúscula */
+    margin-bottom: 0.5em;
+}
+h3{
+    font-weight: 700;
+    font-size: 12px;
+    /*text-transform: uppercase;*/ /* para que se muestre el texto en mayúscula */
+    margin-bottom: 0.25em;
+}
+
+h4{
+    font-family: cursive;
+    font-weight: 500;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.alineacion-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.alineacion-derecha{
+    flex-direction: row;
+    text-align: right;
+}
+
+.bordesredondeados{
+    border-radius: 20px;
+}
+
+.alineacion-central{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.center{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container{
+    max-width: 1200px; /* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    /* Al sere ambos márgenes auto, son iguales y se ve la caja centrada */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container500px{
+    max-width: 700px; /* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    /* Al sere ambos márgenes auto, son iguales y se ve la caja centrada */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container100px{
+    max-width: 100px; /* Ancho máximo */
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.container150px{
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    margin: 0px;
+    display:flex;
+}
+
+.container300px-150px{
+    width: 300px;
+    height: 165px;
+}
+
+.container300px-250px{
+    width: 300px;
+    height: 200px;
+}
+
+.row{
+    display: flex; /* Por defecto acomoda los objetos que contiene uno al costado del otro */
+
+    margin-left: -15px;
+    margin-right: -15px;
+    /* Elimina visualmente el padding sobrante */
+}
+.col{
+    flex-basis: 0;
+    flex-grow: 1;
+    /* Con estas dos propiedades las cajas van a tener el mismo ancho */
+    padding-left: 15px;
+    padding-right: 15px;
+
+    box-sizing: border-box; /* para que el padding no incremente el ancho */
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+}
+
+.padded{/* Así se define una regla para una clase (empieza con .) */
+    /* Una clase se puede usar varias veces pero un id solo una vez */
+    padding-top: 15px;
+    padding-bottom: 0px;
+    /* padding es la distancia del borde al contenido */
+}
+
+#colaboradores{
+    color: var(--color-negro);
+    text-align: center;
+}
+
+#colaboradores img{
+    border-radius: 50%;
+    margin-bottom: 30px;
+    filter: grayscale(1);/* Filtro de escala de grises */
+    transition: all .5s ease-in-out; /* Así se indica un cambio gradual, indicando todas las propiedades (all) tiempo y el efecto */
+}
+
+#colaboradores img:hover{/* .hover (subclase) es el estado al pasar el puntero del mouse sobre el objeto */
+    filter: grayscale(0);
+    transform: rotate(-15deg);
+}
+
+#main-footer{
+    background-color: var(--gris-oscuro);
+    color: var(--gris-claro);
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.img-fluid{
+    width: 100%;/* Así se indica que el ancho del objeto sea igual al de su contenedor */
+    height: auto;/* Así se indica que el alto sea proporcional al ancho */
+}
+
+/* ZOOM DE IMAGEN  ***********************************************************************************/
+.zoom-imagen-icon{
+    transition: transform 0.2s;
+}
+
+.zoom-imagen-icon:hover{
+    transform: scale(1.25);
+}
+
+/* PADDING  ***********************************************************************************/
+.paddingtop10px{
+    padding-top: 10px;
+}
+
+.paddingtop100px{
+    padding-top: 100px;
+}
+
+.paddingbot10px{
+    padding-bottom: 10px;
+}
+
+/* LEYENDA DE IMAGEN  ***********************************************************************************/
+
+.leyenda-sobre-imagen{
+    position: relative;/* para que los objetos contenidos dentro de él con position relative
+    lo tomen como referencia  */
+}
+
+.leyenda-sobre-imagen figcaption{
+    position: absolute; /* Para que el objeto esté flotando */
+    top: 0;/* Distancia al borde superior de su contenedor */
+    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    width: 100%;/* calc hace una operación de cálculo */
+    padding: 0px;
+    box-sizing: border-box;
+    color: var(--color-blanco);
+    opacity: 0;/* opacity:0 es totalmente transparente */
+    transition: all .5s ease-in-out;
+}
+
+.leyenda-sobre-imagen figcaption:hover{
+    opacity: 1;/* opacity:1 es nada transparente */
+}
+
+/* MENUS  ***********************************************************************************/
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li a{
+    display: block;/* Asi recién considera los padding verticales */
+}
+
+.menu-top li a{
+    padding: 5px 10px;
+    color: var(--gris-claro);
+    font-size: 0.8em;
+}
+.menu-top li a:hover{
+    background-color: rgba(0,0,0,0.2);
+    text-decoration: none;
+}
+.menu-main li a{
+    padding: 30px 10px;
+    color: var(--gris-oscuro);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: solid 3px transparent;
+}
+.menu-main li a:hover{
+    text-decoration: none;
+    color: var(--color-negro);
+    border-bottom: solid 3px var(--color-negro);
+}
