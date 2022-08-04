@@ -78,6 +78,10 @@
     background-color: #DCAAFA;
 }
 
+.colorfondoencuesta{
+    background-color: #EFECF4;
+}
+
 .container-banner {
     /*width: 200px;*/
     height: 400px;
@@ -107,6 +111,10 @@
     /* font-weight: 200; */
     line-height: 0.9em;
     letter-spacing: -1px;
+}
+
+.mensaje-encuenta{
+    font-family: dream_orphansregular;
 }
 
 .texto-importante{
